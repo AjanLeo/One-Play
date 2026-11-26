@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AudioLines, Bell, ChevronRight, Crown, Gamepad2, Gift, Headphones, Home, Menu, Mic2, Plus, Search, Settings2, ShieldCheck, Sparkles, Star, Users, X, Zap } from "lucide-react";
+import { AudioLines, Bell, ChevronRight, Crown, Gamepad2, Gift, Headphones, Home, Menu, Mic2, Plus, Search, Settings2, ShieldCheck, Sparkles, Users, X } from "lucide-react";
 
 const rooms = [
   { id: 1, name: "Gece Tayfası", host: "Luna", people: 8, tag: "SOHBET", color: "violet", avatars: ["L","M","A","S"] },
@@ -64,6 +64,6 @@ export default function HomePage() {
 
     {mobileMenu&&<button className="scrim" onClick={()=>setMobileMenu(false)} aria-label="Menüyü kapat"/>}
     {notice&&<div className="toast"><Sparkles size={16}/>{notice}</div>}
-    {modal&&<div className="modal-backdrop" onClick={()=>setModal("")}><div className="modal" onClick={e=>e.stopPropagation()}><button className="modal-x" onClick={()=>setModal("")}><X size={18}/></button><div className="modal-mark">O<span>.</span></div><div className="eyebrow muted">ONE PLAY COMMUNITY</div><h2>{modal}</h2><p>Bu özellik ONE PLAY'in sonraki geliştirme aşamasında gerçek hesap ve sunucu altyapısıyla etkinleştirilecek.</p><button className="primary-btn full" onClick={()=>setModal("")}>Anladım</button></div></div>}
+    {modal&&<div className="modal-backdrop" onClick={()=>setModal("")}><div className="modal" onClick={e=>e.stopPropagation()}><button className="modal-x" onClick={()=>setModal("")}><X size={18}/></button><div className="modal-mark">O<span>.</span></div><div className="eyebrow muted">ONE PLAY COMMUNITY</div><h2>{modal}</h2><p>Bu özellik ONE PLAY&apos;in sonraki geliştirme aşamasında gerçek hesap ve sunucu altyapısıyla etkinleştirilecek.</p><button className="primary-btn full" onClick={()=>setModal("")}>Anladım</button></div></div>}
   </main>;
 }
